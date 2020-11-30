@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
-    <title>CVS Workflow</title>
+    <title>CVS Helper - Home</title>
 </head>
 <body>
     <header>
-        <h1>CVS Workflow</h1>
+        <h1>CVS Helper</h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="./views/qvhelper.html">QV Helper</a></li>
+                <li><a href="./views/info.html">Useful Info</a></li>
+                <li><a href="./views/lawreview.html">Law Review</a></li>
+            </ul>
+        </nav>
     </header>
+    <div class="intro">I hope this website serves to assist you in day-to-day activities</div>
+
     <div class="container">
-        <div class="option">C</div>
-        <div class="option">X</div>
-        <!-- <div class="option">SA</div> -->
+        <div class="tile">
+            <div class="description">Use these buttons to generate barcodes to aid in scanning out scripts in QV2</div>
+            <div class="click"><a href="./views/qvhelper.html">QV Helper</a></div>
+        </div>
+        <div class="tile">
+            <div class="description">Use these phone numbers to aid in tasks as needed</div>
+            <div class="click"><a href="./views/info.html">Useful Info</a></div>
+        </div>
     </div> 
-    <div class="barcode-space">
-        <img class="barcode barcodeC" src="./resources/images/barcodeC2.png" alt="">
-        <img class="barcode barcodeX" src="./resources/images/barcodeX2.png" alt="">
-        <img class="barcode barcodeSA" src="./resources/images/barcodeSA.png" alt="">
-    </div>
+    
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="resources/js/index.js"></script>
 </body>

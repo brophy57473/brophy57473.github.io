@@ -9,4 +9,40 @@ html {
 header {
     background-color: rgb(250,88,88);
     color: navy;
+    display: inline-flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header h1 {
+    width: 100%;
+    min-width: 200px;
+    color: yellow;
+    text-align: center;
+    margin: 10px;
+}
+.container {
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+}
+.tile {
+    width: 30%;
+    height: 200px;
+    min-width: 100px;
+    background-color: navy;
+    color: lightgray;
+    padding: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tile a {
+    color: yellow;
+    text-decoration: none;
 }
