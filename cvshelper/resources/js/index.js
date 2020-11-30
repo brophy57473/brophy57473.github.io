@@ -2,18 +2,32 @@ $(function(){
 
 $("div.option").on('click',function(){
     var opt = $(this).html();
-    var bar = ".barcode" + opt;
-    showCode(bar);
+    
+    showCode(opt);
 })
 
-function showCode(bar){
-    if (bar !== "SA"){}
-    setTimeout(function(){
+function showCode(opt){
+    console.log(opt);
+    var bar = ".barcode" + opt;
+    if (opt !== "SA"){
+      setTimeout(function(){
         $('div.option').show();
         $(bar).toggle();
-    },500);
-    $(bar).toggle();
-    $('div.option').hide();
+        },500);
+      $(bar).toggle();
+      $('div.option').hide();
+    } else if (opt === "SA"){
+      setTimeout(function(){
+         $('.barcodeL').toggle();   
+         $(bar).toggle();
+       }, 500);
+      setTimeout(function(){
+          $('.barcodeL').toggle();
+          $('.option').toggle();
+        }, 1000);
+      $(bar).toggle();
+      $(".option").toggle();
+    }
 }
 
 })
