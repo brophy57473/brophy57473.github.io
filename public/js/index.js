@@ -2,7 +2,7 @@ const data = {
     about: {
         first: 'Ryan', 
         last: 'Brophy',
-        phone: '7349040788',
+        digits: '734.904.0788',
         email: 'rbrophy@att.net'
          },
     summary: {
@@ -287,6 +287,13 @@ $(function(){
             ${leadership.president.summary}
         </div>`
     );
+
+    //CONTACT
+    let contact = data.about;
+    $('.contact').append(
+        `<h4>${contact.email}</h4>
+        <h4>${contact.digits}</h4>`
+    )
 
 
 

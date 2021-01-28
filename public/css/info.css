@@ -61,3 +61,10 @@
 .leader-box {
     margin-top: 20px;
 }
+/*CONTACT*/
+.contact {
+    text-align: center;
+}
+.contact h4 {
+    margin: 40px;
+}
