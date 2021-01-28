@@ -154,14 +154,13 @@ const data = {
 $(function(){
 
     let windowHeight = $(window).height();
+    let windowWidth = $(window).width();
     let introHeight = $('.intro-container').height();
     $('.intro').css('min-height', windowHeight);
     $('.intro-container').css('margin-top', ((windowHeight/2) - introHeight));
     
 
     //SCROLLING
-    let vertical = 1;
-    let horizontal = 1;
     $("nav a").click(function(e){
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -176,20 +175,29 @@ $(function(){
         return str;
     }
 
+    let vertical = 1;
+    let horizontal = 1;
     var lastScrollTop = 0;
     $(window).scroll(function() {
         let top = $('.pic').css('top');
         let right = $('.pic').css('right');
         top = removePX(top);
         right = removePX(right);    
-
+        let offset = Math.random() * 5;
+        if (top == windowHeight || top == 0) {
+            vertical = vertical * -1;
+        }
+        if (right == 0 || right == windowWidth) {
+            horizontal = horizontal * -1;
+        }
+        console.log(`vertical: ${vertical} horizontal: ${horizontal}`)
         var st = $(window).scrollTop();
         if (st > lastScrollTop){
-            $('.pic').css('top', top - 2);
-            $('.pic').css('right', right - 2);
+            $('.pic').css('top', top - (offset*vertical));
+            $('.pic').css('right', right - (offset*horizontal));
         } else {
-            $('.pic').css('top', top - 2);
-            $('.pic').css('right', right + 2);
+            $('.pic').css('top', top - (offset*vertical));
+            $('.pic').css('right', right + (offset*horizontal));
         }
         lastScrollTop = st;
     })
