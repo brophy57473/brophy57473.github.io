@@ -154,12 +154,14 @@ const data = {
 $(function(){
 
     let windowHeight = $(window).height();
-    let introHeight = $('.intro').height();
-
+    let introHeight = $('.intro-container').height();
     $('.intro').css('min-height', windowHeight);
-    $('.intro').css('margin-top', ((windowHeight/2) - (introHeight/2)));
+    $('.intro-container').css('margin-top', ((windowHeight/2) - introHeight));
+    
 
     //SCROLLING
+    let vertical = 1;
+    let horizontal = 1;
     $("nav a").click(function(e){
         var $anchor = $(this);
         $('html, body').stop().animate({
