@@ -4,23 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./resources/css/index.css" type="text/css">
-    <title>Ryan B Career Change</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./public/css/index.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/info.css">
+    <title>The Programmatic Pharmacist</title>
 </head>
 <body>
-    <header>
-        <h1>Hello and Welcome</h1>
-        <h2>All of these projects are examples of a pharmacist trying to pursue a more fulfilling career.</h2>
-    </header>
-    <div class="container">
-        <div class="tile">
-            <div>Check out my<br><a href="https://brophy57473.github.io/excursion/">Excursions</a><br>practice project</div>
+    <nav>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#pharmacy">PHARM</a></li>
+            <li><a href="#technology">TECH</a></li>
+            <li><a href="#leadership">LEAD</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="background-pic pic"></div>
+
+        <div class="strip intro">
+            <div class='img'></div>
+            <h1 class='name'>Ryan Brophy</h1>
+            <br/>
+            <h2>A Programmatic Pharmacist</h2>
+        </div> 
+        <div class="strip" id='about'>
+            <h1 class='about'>About Me</h1>
+            <div class='summary info'></div>
+
+        </div> 
+        <div class='strip' id="pharmacy">
+            <h2>Pharmacy Experience</h2>
+            <div class="work-experience"></div>
+            <div class="rotations info">
+                <h3 class='subheading'>Pharmacy Rotations</h3>
+            </div>
         </div>
-        <div class="tile">
-            <div>Check out my<br><a href="https://brophy57473.github.io/cvshelper/">CVS Helper</a><br>practice project</div>
+        <div class='strip' id='technology'>
+            <h2>Technology Experience</h2>
+            <div class='technology info'></div>
         </div>
-    </div> 
+        <div class='strip' id='leadership'>
+            <h2>Leadership Experience</h2>
+            <div class='leadership info'></div>
+        </div>
+        <div class='strip' id='contact'>
+            <h2>Contact</h2>
+            <div class="contact info"></div>
+        </div>
+        <div class='bottom'></div>
+    </main>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="resources/js/index.js"></script>
+   <script src="./public/js/index.js"></script>
 </body>
 </html>
