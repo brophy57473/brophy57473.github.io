@@ -1,0 +1,63 @@
+/*SUMMARY*/
+.sum-text {
+    margin: 20px;
+}
+/*PHARMACY*/
+.job-text {
+    margin: 20px;
+}
+.sub-info {
+    font-weight: lighter;
+    font-size: 12px;
+}
+.rotations span{
+    font-weight: bold;
+
+}
+.job-text h3 {
+    display: inline;
+}
+/*TECHNOLOGY*/
+.technology h3 {
+    margin: 20px;
+}
+.languages ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+#projects-title {
+    margin-bottom: 0px;
+}
+.projects li {
+    margin: 10px 20px 20px;
+}
+.projects a{
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black inset;
+    width: 100px;
+    padding: 10px;
+}
+/* LEADERSHIP */
+.leadership h3 {
+    margin-top: 10px;
+    display: block;
+}
+.leadership h4 {
+    display: inline;
+}
+#recent-events {
+    margin-top: 20px;
+}
+.leadership li {
+    margin-top: 10px;
+}
+.leader-box {
+    margin-top: 20px;
+}
