@@ -154,11 +154,20 @@ const data = {
 $(function(){
 
     let windowHeight = $(window).height();
+    let introHeight = $('.intro').height();
 
     $('.intro').css('min-height', windowHeight);
-    $('.name').css('margin-top', windowHeight/7);
+    $('.intro').css('margin-top', ((windowHeight/2) - (introHeight/2)));
 
     //SCROLLING
+    $("nav a").click(function(e){
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1000);
+        e.preventDefault();
+    });
+
     function removePX(str) {
         str = str.split('p');
         str = parseInt(str[0]);
@@ -201,9 +210,9 @@ $(function(){
             <div>
                 <h3>${pharmacy.cvs[job].what}</h3> | CVS Health
             </div>   
-            <span class='sub-info'>
+            <div class='sub-info'>
             ${pharmacy.cvs[job].when} | 
-            ${pharmacy.cvs[job].where}<br/></span>
+            ${pharmacy.cvs[job].where}<br/></div>
             ${pharmacy.cvs[job].summary}
             </div>`
         );
