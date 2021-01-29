@@ -81,7 +81,7 @@ const data = {
             workflow: {
                 what: 'Community Pharmacy Workflow Aid',
                 when: 'Fall 2020 - Present',
-                src: '',
+                src: 'https://brophy57473.github.io/workflow',
                 summary: 'A small project to increase efficiency while working as a retail pharmacist. This page generates various barcodes which are used to complete prescription verification within the software used by CVS.'
             },
             putting: {
@@ -157,7 +157,7 @@ $(function(){
     let windowWidth = $(window).width();
     let introHeight = $('.intro-container').height();
     $('.intro').css('min-height', windowHeight);
-    $('.intro-container').css('margin-top', ((windowHeight/2) - introHeight));
+    $('.intro-container').css('margin-top', ((windowHeight/2) - (introHeight/2) - 80));
     
 
     //SCROLLING
@@ -183,21 +183,21 @@ $(function(){
         let right = $('.pic').css('right');
         top = removePX(top);
         right = removePX(right);    
-        let offset = Math.random() * 5;
-        if (top == windowHeight || top == 0) {
+        let offset = 1;
+        if (top == (windowHeight - 500)  || top == 0) {
             vertical = vertical * -1;
         }
-        if (right == 0 || right == windowWidth) {
+        if (right == 0 || right == windowWidth - 250) {
             horizontal = horizontal * -1;
         }
         console.log(`vertical: ${vertical} horizontal: ${horizontal}`)
         var st = $(window).scrollTop();
         if (st > lastScrollTop){
-            $('.pic').css('top', top - (offset*vertical));
-            $('.pic').css('right', right - (offset*horizontal));
+            $('.pic').css('top', top + (offset*vertical));
+            $('.pic').css('right', right + (offset*horizontal));
         } else {
             $('.pic').css('top', top - (offset*vertical));
-            $('.pic').css('right', right + (offset*horizontal));
+            $('.pic').css('right', right - (offset*horizontal));
         }
         lastScrollTop = st;
     })
@@ -228,7 +228,7 @@ $(function(){
         );
     }
     let rotations = '';
-    pharmacy.rotations.forEach( ({where, when, what, summary}) => {
+    pharmacy.rotations.reverse().forEach( ({where, when, what, summary}) => {
         rotations = rotations + 
         `<div class='job-text rotations info'>
         <span>${what}</span> | ${where}
