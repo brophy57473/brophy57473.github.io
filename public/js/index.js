@@ -6,9 +6,10 @@ const data = {
         email: 'rbrophy@att.net'
          },
     summary: {
-        'Patient Education': 'Educate patients using common terminology, have received positive feedback from patients and peers regarding knowledge and care.',
+        'Aspiring Developer': 'Strong interest and aptitude in software development aspiring to be a contributing member of a development team that improves the practice of pharmacy.',
         'Time Management': 'Experience filling an average of 350 prescriptions per day as the only pharmacist on staff while managing 2-4 pharmacy technicians. From October-November 2020, administered approximately 50 flu shots per day while maintaining the normal workload of the pharmacy.',
-        'Team Leadership': 'Provide on-the-job education and training to new technicians to improve overall workflow and patient satisfaction.'
+        'Team Leadership': 'Provide on-the-job education and training to new technicians to improve overall workflow and patient satisfaction.',
+        'Patient Education': 'Educate patients using common terminology, have received positive feedback from patients and peers regarding knowledge and care.'
     },
     education: {
         where: 'Ferris State University',
@@ -70,7 +71,8 @@ const data = {
     ],
     tech: {
         languages: ['JS','HTML','CSS','React.js'],
-        github: '',
+        github: '@brophy57473',
+        githubSRC: 'https://github.com/brophy57473',
         projects: {  
             alternativeScoring: {
                 what: 'Brophy Disc Golf Scoring',
@@ -89,7 +91,7 @@ const data = {
                 when: 'Fall 2019',
                 src: 'https://script.google.com/macros/s/AKfycbxmmTUj6aW09eFcgykMUF6LwvX02PDDu3WZsxNJAESX5Bu7fQ/exec',
                 srcAlternative: 'https://script.google.com/macros/s/AKfycbwaKvQxX2f7hxaek3qFZAtqe_SCh02ck9bmflbXk-jZ-MEkLA/exec',
-                summary: 'A website to manage the local disc golf putting league. Built to ensure the league could self-sustain once I moved out of Big Rapids. This project challenged my understanding of html/css/js. As I had not learned about React or back-end development, I use a Google Sheet as my database and built it entirely in Google Apps Script.',
+                summary: 'A website to manage the local disc golf putting league. Built to ensure the league could self-sustain once I moved out of Big Rapids. This project challenged my understanding of html/css/js. As I had not learned about React or back-end development, I used a Google Sheet as my database and built it entirely in Google Apps Script.',
             }      
         }
     },
@@ -254,7 +256,7 @@ $(function(){
         `<li><h4>${techProjects[proj].what}</h4>
         <div class="sub-info">${techProjects[proj].when}</div>
         <div>${techProjects[proj].summary}</div>
-        <a href=${techProjects[proj].src}>View Project</a>
+        <a href=${techProjects[proj].src} target="_blank">View Project</a>
         </li>`
     }
 
@@ -262,11 +264,12 @@ $(function(){
         `<div class='languages'><h3>Languages</h3>
             <ul>${languagesList}</ul>
         </div>
-        <div class='github'>${tech.github}</div>
         <div class='projects'>
             <h3 id='projects-title'>Current and Past Projects</h3>
             <ul>${techProjectsList}</ul>
-        </div>`
+        </div>
+        <div class='github'><a href=${tech.githubSRC} target="_blank">Github</a></div>
+        `
     );
 
 
