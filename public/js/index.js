@@ -83,8 +83,8 @@ const data = {
             workflow: {
                 what: 'Community Pharmacy Workflow Aid',
                 when: 'Fall 2020 - Present',
-                src: 'https://brophy57473.github.io/workflow',
-                summary: 'A small project to increase efficiency while working as a retail pharmacist. This page generates various barcodes which are used to complete prescription verification within the software used by CVS.'
+                src: 'https://main.dmum6n6vgan3x.amplifyapp.com/',
+                summary: 'A project used to learn basics of AWS (Amplify/API Gateway/Lambda/DynamoDB). This React application can generate barcodes to increase prescription verification speed and a virtual/dynamic phonebook that pharmacists can use to find phone numbers for pharmacies in the Grand Rapids/Kalamazoo area.'
             },
             putting: {
                 what: 'Big Rapids Disc Golf Putting League Website',
@@ -123,7 +123,7 @@ const data = {
             }]
         },
         coach: {
-            what: 'Coach of Ferris Statue University Disc Golf Team',
+            what: 'Coach of Ferris State University Disc Golf Team',
             when: 'May 2019 - Present',
             summary: 'Teach new and experienced golfers the skills needed to compete in collegiate disc golf at the highest level. Plan and coordinate team trips and events. Conduct tryouts and assist in announcing team decisions. Developed and managed a website to score and track statistics for Big Rapids’ annual winter putting league.'
         },
